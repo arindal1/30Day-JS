@@ -2,6 +2,8 @@
 
 Welcome to my repository for the **30 Days of JavaScript Challenge**! This challenge is hosted by [Chai Aur Code](https://www.youtube.com/@chaiaurcode) on YouTube. The challenge aims to help you master/revise JavaScript by tackling different topics each day for 30 days.
 
+![image](res/1.png)
+
 ## Challenge Overview
 
 This repository contains my solutions and code snippets for the 30-day JavaScript challenge. Each day, I'll be uploading new code covering various JavaScript concepts including:
@@ -23,12 +25,12 @@ The repository is organized by day, with each day's code in its respective folde
 
 ```
 /Day-One
-  -  day1.js
+  -  d-1.js
 /Day-Two
-  - dady2.js
+  - d-2.js
 ...
 /Day-Thirty
-  - day30.js
+  - d-30.js
 ```
 
 ## How to Use

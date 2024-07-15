@@ -1,6 +1,6 @@
 # 30 Days of JavaScript Challenge
 
-Welcome to my repository for the **30 Days of JavaScript Challenge**! This challenge is hosted by [Chai Aur Code](https://www.youtube.com/@chaiaurcode) on YouTube. The challenge aims to help you master/revise JavaScript by tackling different topics each day for 30 days.
+Welcome to my repository for the **30 Days of JavaScript Challenge**! This challenge is hosted by @[hiteshchoudhary](https://github.com/hiteshchoudhary) on [Chai Aur Code](https://www.youtube.com/@chaiaurcode). The challenge aims to help you master/revise JavaScript by tackling different topics each day for 30 days.
 
 ![image](res/1.png)
 

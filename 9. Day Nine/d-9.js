@@ -33,7 +33,7 @@ if (parentElement.lastElementChild) {
 
 
 // Task 7: Select an HTML element and change one of its attributes (e.g., src of an img tag).
-document.getElementById('image').setAttribute('src', 'assets/1.jpg');
+document.getElementById('image').setAttribute('src', 'https://github.com/arindal1/30Day-JS/blob/main/res/3.jpg');
 
 
 // Task 8: Add and remove a CSS class to/from an HTML element.

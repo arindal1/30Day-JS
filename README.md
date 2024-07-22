@@ -2,58 +2,10 @@
 
 Welcome to my repository for the **30 Days of JavaScript Challenge**! This challenge is hosted by @[hiteshchoudhary](https://github.com/hiteshchoudhary) on [Chai Aur Code](https://www.youtube.com/@chaiaurcode). The challenge aims to help you master/revise JavaScript by tackling different topics each day for 30 days.
 
-![image](res/1.png)
-
-## Challenge Overview
-
-This repository contains my solutions and code snippets for the 30-day JavaScript challenge. Each day, I'll be uploading new code covering various JavaScript concepts including:
-
-- Variables
-- Operators
-- Control Structures
-- Loops
-- Functions
-- Arrays
-- Objects
-- And more!
+![image](res/1.png) <br>
+This repository contains my solutions and code snippets for the 30-day JavaScript challenge.
 
 You can find the challenge details and sign up [here](https://courses.chaicode.com/learn/batch/30-days-of-Javascript-challenge).
-
-## Repository Structure
-
-The repository is organized by day, with each day's code in its respective folder:
-
-```
-/Day-One
-  -  d-1.js
-/Day-Two
-  - d-2.js
-...
-/Day-Thirty
-  - d-30.js
-```
-
-## How to Use
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/arindal1/30Day-Js.git
-   ```
-
-2. **Navigate to the desired day folder:**
-
-   ```bash
-   cd 30Day-Js/Day-One
-   ```
-
-3. **Run the code:**
-
-   You can run the JavaScript files using Node.js or in the browser console.
-
-   ```bash
-   node variables.js
-   ```
 
 ## Contact Me
 

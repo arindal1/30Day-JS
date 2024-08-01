@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage and SessionStorage</title>
+</head>
+<body>
+    <h1>LocalStorage Form</h1>
+    <form id="localStorageForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Save to LocalStorage</button>
+    </form>
+    <div id="localStorageData"></div>
+
+    <h1>SessionStorage Form</h1>
+    <form id="sessionStorageForm">
+        <label for="sessionName">Name:</label>
+        <input type="text" id="sessionName" name="sessionName" required>
+        <label for="sessionEmail">Email:</label>
+        <input type="email" id="sessionEmail" name="sessionEmail" required>
+        <button type="submit">Save to SessionStorage</button>
+    </form>
+    <div id="sessionStorageData"></div>
+
+    <script src="d-20.js"></script>
+</body>
+</html>

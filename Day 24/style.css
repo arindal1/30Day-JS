@@ -1,0 +1,135 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #0b0b0b, #292929);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+    max-width: 90%;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.container.expanded {
+    width: 90%;
+    max-width: 800px;
+    padding: 50px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #fff;
+}
+
+#search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#city-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+#search-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#weather-info, #forecast-info {
+    margin: 20px 0;
+}
+
+#weather-info img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+#weather-info img:hover {
+    transform: rotate(10deg);
+}
+
+#forecast-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.forecast-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: calc(20% - 10px);
+    margin: 0 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.forecast-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.forecast-item p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.forecast-item img {
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width: 600px) {
+    .forecast-item {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 20px;
+    }
+
+    .forecast-item {
+        width: calc(100% - 10px);
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #search-button {
+        padding: 8px 15px;
+    }
+}

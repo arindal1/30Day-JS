@@ -4,7 +4,7 @@ document.getElementById('search-button').addEventListener('click', () => {
 });
 
 function fetchWeatherData(city) {
-    const apiKey = 'YOUR_API_KEY'; // replace with you OpenWeatherMap API key
+    const apiKey = 'c27b6dd2771afea1bf46540a6c17749a'; // replace with you OpenWeatherMap API key
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     fetch(url)
@@ -18,7 +18,7 @@ function fetchWeatherData(city) {
 }
 
 function fetchForecastData(city) {
-    const apiKey = 'YOUR_API_KEY'; // replace with you OpenWeatherMap API key
+    const apiKey = 'c27b6dd2771afea1bf46540a6c17749a'; // replace with you OpenWeatherMap API key
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
     fetch(url)

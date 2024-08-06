@@ -65,3 +65,47 @@ function expandContainer() {
     const container = document.getElementById('container');
     container.classList.add('expanded');
 }
+
+
+const canvas = document.getElementById('effects');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const raindrops = [];
+
+function initRain() {
+    for (let i = 0; i < 100; i++) {
+        raindrops.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            speed: Math.random() * 10 + 5,
+            length: Math.random() * 20 + 5,
+            thickness: Math.random() * 2 + 1
+        });
+    }
+}
+
+function drawRain() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (const raindrop of raindrops) {
+        ctx.beginPath();
+        ctx.moveTo(raindrop.x, raindrop.y);
+        ctx.lineTo(raindrop.x, raindrop.y + raindrop.length);
+        ctx.strokeStyle = '#00f';
+        ctx.lineWidth = raindrop.thickness;
+        ctx.stroke();
+
+        raindrop.y += raindrop.speed;
+
+        if (raindrop.y > canvas.height) {
+            raindrop.y = 0;
+        }
+    }
+    requestAnimationFrame(drawRain);
+}
+
+initRain();
+drawRain();

@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Dark Theme Background */
+body {
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: #333;
+    color: #ff6347;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    animation: navbarIdle 3s ease-in-out infinite;
+}
+
+/* Idle Animation for Navbar */
+@keyframes navbarIdle {
+    0% { background-color: #000000; }
+    50% { background-color: #181818; }
+    100% { background-color: #000000; }
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6347;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.logo::before, .logo::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6347;
+    left: 0;
+    transition: all 0.3s ease;
+    transform: scaleX(0);
+}
+
+.logo::before {
+    top: 0;
+    transform-origin: left;
+}
+
+.logo::after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+.logo:hover::before {
+    transform: scaleX(1);
+}
+
+.logo:hover::after {
+    transform: scaleX(1);
+}
+
+.logo:hover {
+    color: #fff;
+    animation: colorPulse 1s infinite alternate;
+}
+
+@keyframes colorPulse {
+    0% {
+        color: #ff6347;
+    }
+    100% {
+        color: #ff4500;
+    }
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    animation: hoverGlow 1s ease-in-out infinite alternate;
+}
+
+@keyframes hoverGlow {
+    0% {
+        text-shadow: 0 0 10px #ff6347;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff4500;
+    }
+}
+
+
+/* Cart Section */
+.cart-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #0f0f0f;
+    color: #fff;
+    text-align: center;
+}
+
+.cart-container {
+    background-color: #1a1a1a;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-out;
+}
+
+.cart-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ff6347;
+}
+
+.empty-cart-message {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ff6347;
+    opacity: 0.8;
+}
+
+.continue-shopping-button {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #ff6347;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ff6347;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.continue-shopping-button:hover {
+    background-color: #ff6347;
+    color: #fff;
+}

@@ -1,0 +1,27 @@
+[
+    {
+        "image": "res/1.jpg",
+        "name": "Product 1",
+        "price": "$49.99"
+    },
+    {
+        "image": "res/2.png",
+        "name": "Product 2",
+        "price": "$59.99"
+    },
+    {
+        "image": "res/3.png",
+        "name": "Product 3",
+        "price": "$59.99"
+    },
+    {
+        "image": "res/5.png",
+        "name": "Product 4",
+        "price": "$59.99"
+    },
+    {
+        "image": "res/8.jpg",
+        "name": "Product 5",
+        "price": "$59.99"
+    }
+]

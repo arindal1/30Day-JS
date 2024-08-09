@@ -1,0 +1,345 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Dark Theme Background */
+body {
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: #333;
+    color: #ff6347;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    animation: navbarIdle 3s ease-in-out infinite;
+}
+
+/* Idle Animation for Navbar */
+@keyframes navbarIdle {
+    0% { background-color: #000000; }
+    50% { background-color: #181818; }
+    100% { background-color: #000000; }
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6347;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.logo::before, .logo::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6347;
+    left: 0;
+    transition: all 0.3s ease;
+    transform: scaleX(0);
+}
+
+.logo::before {
+    top: 0;
+    transform-origin: left;
+}
+
+.logo::after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+.logo:hover::before {
+    transform: scaleX(1);
+}
+
+.logo:hover::after {
+    transform: scaleX(1);
+}
+
+.logo:hover {
+    color: #fff;
+    animation: colorPulse 1s infinite alternate;
+}
+
+@keyframes colorPulse {
+    0% {
+        color: #ff6347;
+    }
+    100% {
+        color: #ff4500;
+    }
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    animation: hoverGlow 1s ease-in-out infinite alternate;
+}
+
+@keyframes hoverGlow {
+    0% {
+        text-shadow: 0 0 10px #ff6347;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff4500;
+    }
+}
+
+/* Banner Styles */
+.banner {
+    height: 36rem;
+    position: relative;
+    margin-top: 50px;
+}
+
+.banner-img {
+    width: 100%;
+    height: 35rem;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(30%);
+    animation: fadeIn 2s ease-out;
+}
+
+.banner-content {
+    position: relative;
+    text-align: center;
+    padding: 0 2rem;
+    z-index: 1;
+}
+
+.banner-content h1 {
+    font-family: "Aclonica", sans-serif;
+    position: relative;
+    top: 14rem;
+    font-size: 6rem;
+    animation: fadeInDown 1s ease-out;
+    color: #ff6347;
+}
+
+.banner-content p {
+    position: relative;
+    top: 13rem;
+    font-size: 2rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Trending Product Section */
+.trending {
+    padding: 2rem;
+    background-color: #1a1a1a;
+    text-align: center;
+    animation: trendingIdle 4s ease-in-out infinite;
+}
+
+/* Idle Animation for Trending Section */
+@keyframes trendingIdle {
+    0% { background-color: #1a1a1a; }
+    50% { background-color: #202020; }
+    100% { background-color: #1a1a1a; }
+}
+
+.trending h2 {
+    font-family: "Sriracha", cursive;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff6347;
+}
+
+.trending-product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    animation: slideIn 1s ease-out;
+}
+
+.trending-product img {
+    width: 20rem;
+    height: 10rem;
+}
+
+.trending-details {
+    max-width: 30rem;
+    text-align: left;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.trending-details h3 a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.trending-details h3 a:hover {
+    color: #fff;
+    animation: hoverGlow 1s ease-in-out infinite alternate;
+}
+
+.trending-details .price {
+    font-size: 1.5rem;
+    color: #ff6347;
+}
+
+/* Products Section */
+.products {
+    padding: 2rem;
+    text-align: center;
+    animation: productIdle 5s ease-in-out infinite;
+}
+
+@keyframes productIdle {
+    0% { background-color: #0f0f0f; }
+    50% { background-color: #151515; }
+    100% { background-color: #0f0f0f; }
+}
+
+.products h2 {
+    font-family: "Sriracha", cursive;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff6347;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.product-item {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 1rem;
+    max-width: 15rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-item img {
+    width: 12rem;
+    height: 12rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.product-item h3 a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.product-item h3 a:hover {
+    color: #fff;
+    animation: hoverGlow 1s ease-in-out infinite alternate;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+    background-color: #2a2a2a;
+    animation: productHover 0.5s ease-out;
+}
+
+@keyframes productHover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/* About Us Section */
+.about-us {
+    padding: 2rem;
+    background-color: #1a1a1a;
+    color: #ff6347;
+    text-align: center;
+    animation: aboutIdle 3s ease-in-out infinite;
+}
+
+@keyframes aboutIdle {
+    0% { background-color: #1a1a1a; }
+    50% { background-color: #2a2a2a; }
+    100% { background-color: #1a1a1a; }
+}
+
+.about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff6347;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+    color: #ff6347;
+}
+
+footer a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+    animation: hoverGlow 1s ease-in-out infinite alternate;
+}
+
+/* Fade-In Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide-In Animation */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
